@@ -1,0 +1,109 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+}
+html{
+  font:62.5%;
+}
+body{
+font-family: sans-serif;
+color:white;
+overflow: hidden;
+}
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+.blurred-wrapper
+{
+  height: 100vh;
+  background:url("red.jpg") center/cover;
+  position: relative;
+  z-index: 1;
+  animation: hue 8s infinite alternate;
+}
+
+.blurred-wrapper::after{
+  content:"";
+  width:100%;
+  height:100%;
+  background: inherit;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
+  filter: blur(0.4rem);
+  transform: scale(1.17);
+}
+
+@keyframes hue {
+  from{
+    filter: hue-rotate(0);
+  }
+  to{
+    filter: hue-rotate(360deg);
+  }
+}
+.main-header{
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.container{
+  max-width: 120rem;
+  margin:0 auto;
+  padding: 4 1rem;
+
+}
+.logo{
+  font-size: 2.6 rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px;
+}
+.logo2{
+  font-size: 0.8rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px;
+}
+.btn-menu{
+  padding: 0.4rem 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2.5rem;
+  color: #fff;
+  margin: 15px;
+}
+.hero{
+  display: flex;
+  align-items:center;
+  height: 100vh;
+}
+.content-wrapper{
+  max-width: 40rem;
+  transform: translateY(-4rem);
+}
+.tagline{
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 150;
+  margin-bottom: 1.5rem;
+}
+.title{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.message{
+  font-size: 1rem;
+  margin-bottom:1rem;
+}
+.btn2{
+  padding: 0.3rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2.5rem;
+  color: #fff;
+font-size: 1.3rem;}
